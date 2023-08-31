@@ -1,0 +1,449 @@
+{
+	"info": {
+		"_postman_id": "8d533d17-51cc-474b-802f-558953543639",
+		"name": "carselonadaily_tsk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29180307"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"santhosh\",\n    \"email\": \"santhosh@gmail.com\",\n    \"password\": \"asdsdf\",\n    \"role\": \"USER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"santhosh@gmail.com\",\n    \"password\": \"asdsdf\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IlNFUlZJQ0VfQ0VOVEVSIiwiZW1haWwiOiJzYW50aG9zaDEyM0BnbWFpbC5jb20iLCJpYXQiOjE2OTMzOTQzMzAsImV4cCI6MTY5MzQxMjMzMH0.yoVtDAjYFS9HzDXXjXoPBJMlgUen6DNOo7H4LyyXP5I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"new name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/updateUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "addVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InNhbnRob3NoQGdtYWlsLmNvbSIsImlhdCI6MTY5MzM4NjYyNSwiZXhwIjoxNjkzNDA0NjI1fQ.tZVxiEJOqFzACvZlqndTPOhndmYgbk0yaCi7HL-p5gs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\":\"test\",\n    \"brand\":\"benz\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/addVehicle",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"addVehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InNhbnRob3NoQGdtYWlsLmNvbSIsImlhdCI6MTY5MzM4NjYyNSwiZXhwIjoxNjkzNDA0NjI1fQ.tZVxiEJOqFzACvZlqndTPOhndmYgbk0yaCi7HL-p5gs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\":\"santhosh\",\n    \"brand\": \"bmw\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/editVehicle/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"editVehicle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserVehicles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteVehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InNhbnRob3NoQGdtYWlsLmNvbSIsImlhdCI6MTY5MzM4NjYyNSwiZXhwIjoxNjkzNDA0NjI1fQ.tZVxiEJOqFzACvZlqndTPOhndmYgbk0yaCi7HL-p5gs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/deleteVehicle/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"deleteVehicle",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ServiceBooking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2OTMzODg4MzMsImV4cCI6MTY5MzQwNjgzM30.P3vlXNkgZX3K7xtyJamg7OEvJivHhGfqxOv1iG9hIlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/serviceBooking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"serviceBooking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "createServiceCenter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2OTMzODg4MzMsImV4cCI6MTY5MzQwNjgzM30.P3vlXNkgZX3K7xtyJamg7OEvJivHhGfqxOv1iG9hIlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"location\": \"Banglore\",\n    \"workingHour\": \"10-5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/addServiceCenter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"addServiceCenter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateServiceCenter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2OTMzODg4MzMsImV4cCI6MTY5MzQwNjgzM30.P3vlXNkgZX3K7xtyJamg7OEvJivHhGfqxOv1iG9hIlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"helloo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/editServiceCenter/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"editServiceCenter",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InNhbnRob3NoIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJzYW50aG9zaEBnbWFpbC5jb20iLCJpYXQiOjE2OTMzODg4MzMsImV4cCI6MTY5MzQwNjgzM30.P3vlXNkgZX3K7xtyJamg7OEvJivHhGfqxOv1iG9hIlE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"santhosh\",\n    \"email\": \"santhosh123@gmail.com\",\n    \"password\": \"asdsdf\",\n    \"role\": \"SERVICE_CENTER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getServiceCenters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/getServiceCenters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"getServiceCenters"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICE_CENTER",
+			"item": [
+				{
+					"name": "upcomingServices",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateService",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
